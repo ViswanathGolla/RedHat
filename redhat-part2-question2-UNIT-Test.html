@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title> 
+ 
+  <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.0.1.css">
+  <script src="https://code.jquery.com/qunit/qunit-2.0.1.js"></script>
+  <script src="redhat-part2-question2-1stSolution.js"></script>
+  <!--<script src="redhat-part2-question2-2ndSolution.js"></script>-->
+ 
+  <script>
+      QUnit.test("remoteMathService", function(assert) {   
+       
+        assert.equal(remoteMathService(function(err, answer){
+                        return answer;
+                     }), "3");
+          
+        assert.notEqual(remoteMathService(function(err, answer){
+                        return answer;
+                     }), NaN);
+        
+      });
+  </script>
+</head>
+<body>
+ 
+<div id="qunit"></div>
+ 
+</body>

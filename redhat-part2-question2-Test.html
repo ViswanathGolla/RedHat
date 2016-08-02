@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>    
+
+    <script src="redhat-part2-question2-1stSolution.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.0.1.css">
+    <script src="https://code.jquery.com/qunit/qunit-2.0.1.js"></script>
+    
+    <script type="text/javascript">
+
+    remoteMathService(function(err, answer) {
+
+    if (err) console.log("error ", err);
+
+    if (answer !== 3) {
+
+    console.log("wrong answer"+ answer);
+
+    } else {
+
+    console.log("correct");
+
+    }
+
+    });    
+        
+        
+    </script>
+    
+    
+</head>
+<body>
+    <p>Before fixing, remoteMathService was returning always WrongAnswer on console because of asynchronous calls. I have corrected it. This is just test html to verify that correct answer being called</p>
+    <p>UNIT test has been written for testing this fix in redhat-part2-question2-UNIT-Test.html</p>
+</body>
+</html>

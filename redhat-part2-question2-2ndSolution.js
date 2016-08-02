@@ -1,0 +1,43 @@
+function remoteMathService(cb) {
+
+var one;
+
+var two;
+
+callOneService(function(err, num) {
+
+one = num;
+
+});
+
+callTwoService(function(err, num) {
+
+two = num;
+
+});
+    
+        
+return cb(undefined, one + two);
+    
+
+}
+
+function callOneService(cb) {
+
+setTimeout(function() {
+
+cb(undefined, 1);
+
+}(), 1000);
+
+}
+
+function callTwoService(cb) {
+
+setTimeout(function() {
+
+cb(undefined, 2);
+
+}(), 1500);
+
+}
