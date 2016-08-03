@@ -1,0 +1,149 @@
+
+Section 1 ­ Design & Architecture
+Q1
+
+Could you outline what you would consider to be the important considerations If you were asked to develop an api that could potentially be called by thousands of users across many mobile applications?
+
+===> As I have not working on mobile applications much, generally to support many users across mobile applications, API should be stateless which adds extra complexity and limits the ablitity to scale. I need to condier, each call should not impacto other call or should not refer other calls data or interrupt other call data. Every call should be handled in single session. 
+This is possile with Webservices like REST or SOAP.
+
+Q2
+
+Given a large legacy system, comprised of a set of distributed systems, how would you approach maintaining backwards compatibility while refactoring or enhancing existing apis in order to avoid disrupting live production systems.
+
+===> It is always better to have Continuous Integration(CI) setup for application to check impacts and backward compatabilities. All such kind of test cases should be integrated with CI to make sure everything is fine before deliverying enhancements or refactoring apis on legacy system. 
+
+Write better feature testcases and integration test cases to cross verify the communication brekups or impacts because of enhancement.
+
+Q3
+
+In your own words, explain what you understand microservices to be. When would you consider
+
+using them? What are the pros and cons of using them?
+
+==> Microservices means, break large software projects into small independent/loosely coupled modules which communicates each other with some APIs like REST API over the HTTP and OSGI bundles in OSGI framework. Each module can run on separate process and communicate each with lightweight mechanisms.
+
+Advantages:
+
+1. This is very helpful because, software companies can work on different compoenents concurrently and complete fastly.  
+2. Larger application will never affected if any one module get fail. 
+3. Easy to upgrade one service without affecting others and final application. 
+4. As it is small module, it is easy for new comers to learn the service fastly and maintain it. 
+5. As moduel is small, code base never grow much and loading application to work on will not take much time like monolith applications. Developer productivity get increase
+
+
+Drawbacks:
+1. Deplopyments, Testing and monitoring a microservices-based application can be difficult as all dependent modules should get pass. 
+2. Multiple databases and transaction management can be painful.
+3. Deploying microservices can be complex. They may need coordination among multiple services, which may not be as straightforward as deploying a WAR in a container.
+
+
+
+Q4
+
+How would you secure communications between Apps on mobile devices and a RESTful API?
+
+===> As I have not worked on mobile applications much, I am answering this question generally. When we are providing SOAP webservice to client, We were validating requests based on authentication like username and password. And also, we have used to HTTPS to secure the communication channel. 
+
+And also, there are some options like, SSL. Return some authentication code or token after successful attempt, same has to be send in next REST API urls. 
+
+Another way is, use some secret code/OPT etc.. for each client to validate them and allow the access. 
+
+
+Section 2 ­ Development & Deployment
+
+Q1
+
+If you were working with an application made up of several services that called out to one
+
+another in order to fulfill various tasks and apis, how would you approach testing these services,
+
+both individually ­ particularly at the touch points where they called out to other services ­ and as
+
+part of a whole?
+
+===> I will mock the service object and test our application code first to verify that service is getting called with proper data and processing response if service would return success/failure. 
+
+
+
+Q2
+
+From the perspective of a technical delivery team, can you think of some deployment,
+
+management & support considerations for a hosted SaaS product vs. an On Premise product?
+
+===> SasS products are suitable for Small ro medium bussiness not for large. As software vendors host and maintain servers, databases and Code that contains application logic. This way companies need not required to pay any thing for hardware but consider the data ownership, security and maintainace as companies critical data host by sotware vendors. So,companies has to pay only for security and maintanance activities. 
+
+When I was working on Huawei technologies, We were providing provisioning applicatin as web service and that customer deploy at their server to use it. Here, Software companies just require to deliver the product and provide mainta for this application rest everything has to be handled by customers. 
+
+As it was very big application , we have followed on-premise strategy. If it is very small application, we could have deploy our application in our server and provide URLs like REST APIs to users to access those services.
+
+
+
+Q3
+
+If you were working on a new feature along with several other distributed team members and  you became blocked and unable to continue with your work in a productive manner, how would you go about resolving the problem so that you could continue on?
+
+==> Based on deadline, approach will be different. If I have enough time, I will try all possible options to unblock the issue. 
+
+If I donot have enough time, I will take help from team members/experience members to come out of issue. If still I blocked, I will inform manager/PO about blocking issue and discuss about plan to move further. 
+ 
+
+
+Q4
+
+What do you value in a code base?
+
+===> Code base means it is a source code that is used for building application and also running CI (continous Integration) every day to check code is working every day and able to deliver immediately.There are many repository tools exist in industry to backup and versioning appplication code like SVN, Clearcase etc..
+
+It is very helpful or important when we lost our code because of some problem in system or server.  
+
+
+Section 3 ­ General
+
+Q1
+
+Tell us about a Red Hat product or open source project you really like, and why.
+
+===> Red Hat utilities and tools to supplement Unix and Linux software like Disk Driud, RPM, NetworkManager. These utilities are very helpful for LINUX admins to help at troubleshooting time and also, maintanance time. 
+
+It also provides many open sources like OpenStack cloud. Now, Cloud is very fastly growning technologies and all customers are going towards cloud to save their many at deploy and maintance time. 
+
+Red Hat provides storage, operating system platforms, middleware, applications, management products, and support, training, and consulting services.
+
+
+Q2
+
+What do you find most exciting or interesting about working in the software development field?
+
+==> It is very exciting and chance to work on different technologies every time. Designing solution and develop it with 0 bugs is always big challenge. Software developement evolving every day very fastly like cloud computing, Big Data, Mango DB etc.. 
+
+Developement field will not allow you to stick to one version of technology and gives you chances to improve yourself. 
+
+Software Developement field gives you opportunitiy to develop many products and deploy them to use by world like Mobile App.
+
+Q3
+
+What do you envisage as the major technological advancements in mobile & cloud computing in  the next 5 years?
+
+===> As earlier, every customer suppose to buy hardware deploy delivered software and pay for maintainace. As now, hardware realated things are totally not required if we go for Cloud computing.  As all our daily activities are done with mobile itself because of Apps. I feel, there will be less cost involve in deployment and developement becasue of cloud.
+
+
+Q4
+
+In your career to date, what are you most proud of and why?
+
+===> I am very fast designer and easily understand the exsting products. 
+
+I am the first person in our team got  appreciation from Ericsson after KT has been completed because I have picked design issues and started trouble shooting issues after KT immediately.
+
+Ericsson has an impression on Wipro that Wipro is good for maintainance not for design. I have developed many features and Requirements which gave confidence to Ericsson that Wipro can do Designing work too. 
+
+One of the most proud part in my career, I have developed 70% of code (36MB) code within 45 days after I moved from IBM to Huawei since joing day by using Spring and Hiberate even I was in technical project leader role. That project started from Scratch and provided to customers with good quality. 
+
+And also, I have taken up one taks which no one was ready to take because of complexity in Huawei that is, moving, seleting and dropping SVG elements based on input dynamically. This I have completed with my own design, developement and testing. 
+
+In IBM, there were many discripencies around 40000 in one application which were existing since long and no one was taking care and fixing them. I have fixed them and decreased descripencies to 0 and made the application stable with in short period of time.
+
+I have given KT to many freshers to bring them to my level to handle the things their own.  
+
